@@ -1,26 +1,28 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
-* main - generate random numbers to detect -ve or +ve
+* main - Detemine if a  random number is positive,  negative or zero
  *
- * Return: always (0)
+ * Return: always 0 (Success)
  *
  */
 int main(void)
 {
         int n;
-        5rand(time(0));
+        srand(time(0));
         n = rand() - RAND_MAX / 2;
-        if (n > 0)
+        if (n < 0)
         {
-                printf("%d is positie\n", n);
+                printf("%d is %s\n", n , "negative");
         }
-        else if (n == 0)
+        else if (n > 0)
         {
-                pritf("%d is zero\n",);
+                printf("%d is %s\n", n , "positive");
         }
         else
         {
-                printf ("%d is negative\n",);
+                printf("%d is %s\n", n , "zero");
         }
         return (0);
 }
