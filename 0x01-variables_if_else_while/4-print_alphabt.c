@@ -1,26 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: print all aplhabet letters except q and e
+ * main - Prints numbers between 0 to 9 and letters between a to f.
  *
  * Return: Always 0 (Success)
-*/
-
+ */
 int main(void)
 {
-	char ch = 'a';
+	int i;
 
-	while (ch <= 'z')
+	for (i = 48; i < 58; i++)
 	{
-		if (ch == 'e' || ch == 'q')
-			++ch;
-		putchar(ch);
-		++ch;
+		putchar(i);
+	}
+	for (i = 97; i < 103; i++)
+	{
+		putchar(i);
 	}
 	putchar('\n');
-
 	return (0);
 }
 
